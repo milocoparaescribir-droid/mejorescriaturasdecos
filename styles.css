@@ -8,6 +8,7 @@
   font-family: "roboto";
   src: url(Roboto/Roboto-VariableFont_wdth\,wght.ttf);
 }
+
 .wrapper {
   display: flex;
   flex-direction: row;
@@ -120,6 +121,7 @@ main{
   padding: 10px;
   width: 95%;
   margin: auto;
+  
 }
 
 h4{
@@ -134,8 +136,9 @@ figure{
   text-align: right;
   margin-bottom: 10px;
   position: sticky;
+  border-radius: 10px;
   color: black;
-  background-color: cornflowerblue;
+  background-color: palevioletred;
   padding: 10px;
   top: 0;
   margin-top: 10px;
@@ -146,16 +149,24 @@ figure{
 
 body{
   position: relative;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(imágenes/Fondo2.png);
+  background-size: contain;
+  background-attachment: fixed;
+}
+
+body h2, h1{
+  color: white;
+}
+
+.white{
+  color: white;
 }
 
 .card{
   display: flex;
-  width: 500px;
-  min-width: 200px;
   text-align: center;
   background-color: white;
   flex-direction: column;
-  border: 1px solid black;
   padding: 15px;
   border-radius: 25px;
   margin-bottom: 20px;
@@ -163,20 +174,30 @@ body{
   box-shadow: 5px 5px 15px black;
 }
 
-.card ul{
-  flex-grow: 1;
-}
-.categoríadistinta{
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  justify-content: center;
+.card:hover, .cardty:hover{
+  transform: scale(1.05);
+  box-shadow: -5px 5px 10px black;
+  transition-delay: 50ms;
+  transition: transform 300ms, box-shadow 300ms;
 }
 
+.categoríadistinta{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,400px));
+  gap: 20px;
+  justify-content: center;
+   justify-items: center;
+}
+
+.ry{
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
 p{
-  font-size: 30px;
+  font-size: 20px;
   margin-bottom: 10px;
   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: rgb(33, 33, 33);
 }
 
 hr{
@@ -206,19 +227,8 @@ hr{
   margin-top: 30px;
 }
 
-body{
-  background-color:#e0e0e0;
-}
-
 .sitiooficial:hover{
   background-color: rgb(149, 0, 255);
-  box-shadow: -5px 5px 10px black;
-  transition-delay: 50ms;
-  transition: background-color 300ms, transform 300ms;
-}
-
-.verimagen:hover{
-  background-color: rgb(205, 106, 255);
   box-shadow: -5px 5px 10px black;
   transition-delay: 50ms;
   transition: background-color 300ms, transform 300ms;
@@ -236,12 +246,9 @@ details{
 
 .cardty{
   display: flex;
-  width: 500px;
-  min-width: 200px;
   text-align: center;
   background-color: white;
   flex-direction: column;
-  border: 1px solid black;
   padding: 15px;
   border-radius: 25px;
   margin-bottom: 20px;
@@ -249,10 +256,21 @@ details{
   box-shadow: 5px 5px 15px black;
 }
 
+.cardty:hover{
+  transform: scale(1.05);
+  box-shadow: -5px 5px 10px black;
+  transition-delay: 50ms;
+  transition: transform 300ms, box-shadow 300ms;
+}
+
 .cardty ul{
   color: rgb(226, 15, 226);
   background-color: rgb(255, 255, 97);
   padding: 20px;
+}
+
+.card h2, .cardty h2{
+  color: rgb(50, 50, 50);
 }
 
 h2{
@@ -281,9 +299,6 @@ summary::before{
 
 h1{
   font-family:Verdana, Geneva, Tahoma, sans-serif;
-}
-
-.card h1{
   font-size: 50px;
 }
 
@@ -316,6 +331,10 @@ h1{
   }
   .wrapper{
     flex-wrap: wrap;
+  }
+  .ry{
+    grid-column: 1/2;
+    grid-row: 4/5;
   }
 }
 
