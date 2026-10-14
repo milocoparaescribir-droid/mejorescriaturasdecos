@@ -107,6 +107,10 @@ footer{
   bottom: 0;
 }
 
+footer p{
+  color: white
+}
+
 img{
   margin-left: 20px;
   margin-bottom: 15px;
